@@ -1,0 +1,624 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;   
+    scroll-behavior: smooth; 
+}
+
+a {  
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+}
+
+h1, h2, h3 {
+    word-break: keep-all;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.anim {
+    opacity: 0;
+}
+
+/* Hero Section  */
+#hero {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+}
+
+#hero #logo {
+    font-size: 7rem;
+    animation: text-reveal-rise 2s 1;
+}
+
+#hero h1 span {
+    font-weight: 200;
+}
+
+#hero h1 {
+    line-height: 1.2;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: white;
+}
+
+#hero .hero {
+    padding: 50px;
+}
+
+#hero h2 {
+    position: relative;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 20px;
+}
+
+#hero .cta span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    animation: text-reveal-box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero .cta {
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: .3s ease background-color;
+}
+
+#hero .cta:hover {
+    color: rgb(214, 18, 18);
+    background-color: white;
+}
+/* End Hero Section  */
+
+
+
+/* About Section */
+#about {
+    padding: 50px;
+}
+
+#about .about {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1000px;
+}
+
+#about .about-top h1 {
+    margin: 10px;
+    color: rgb(214, 18, 18);
+    position: relative;
+
+}
+
+#about .about-top p {
+    font-size: 1.5rem;
+}
+
+#about .about-item {
+    margin: 20px 0;
+}
+
+#about .about-item h2 {
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+#about .about-item p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    max-width: 600px;
+}
+
+#about .about-item h2 span {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 0;
+}
+
+#about .about-item h2 span.active {
+    background-color: white;
+    animation: text-reveal-box 1s ease;
+    opacity: 0.5;
+} 
+
+
+#about .about-item .cta {
+    border: 1px solid rgb(214, 18, 18);
+    letter-spacing: 1px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    max-width: 150px;
+    padding: 8px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(214, 18, 18);            
+    display: block;
+}
+/* /* End About Section */
+
+
+/* Curriculum Section */
+#curri {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+}
+
+#curri .curri {
+    flex-direction: column;
+}
+
+#curri h1 {
+    color: white;
+    padding: 70px;
+    margin-top: 30px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+#curri .all-cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#curri .card h2 {
+    font-size: 2rem;
+    word-break: keep-all;
+    padding: 5px 0;
+}
+
+#curri .card p {
+    font-size: 1.3rem;
+}
+
+#curri .curri .card {
+    margin: 10px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s ease;
+    
+}
+
+#curri .curri .card:hover{
+    border: 1px solid white;
+    background-color: rgb(214, 18, 18);
+    color: white;
+}
+
+#curri .curri .card span {
+    color: crimson;
+}
+
+#curri .curri .card:hover span{
+    color: rgb(19, 19, 19);
+}
+
+
+#curri .curri .card.active {
+    animation: anim-rightwards 2s forwards ease-out;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    #curri .all-cards {
+        flex-direction: column;
+    }
+
+    #curri .curri .card {
+        max-width: 500px;
+        margin: 30x;
+    }
+
+    #curri .card h2 {
+        font-size: 2.3rem;
+    } 
+}
+
+@media only screen and (max-height: 600px) {
+    #curri .all-cards {
+        flex-direction: column;
+        padding-bottom: 50px;
+
+    }
+
+    #curri .curri .card {
+        max-width: 500px;
+        margin: 30x;
+        height: fit-content;
+    }
+
+    #curri .card h2 {
+        font-size: 2.7rem;
+    }
+
+    
+}
+/* End Curriculum Section */
+
+
+/* Special Curriculum Section */
+
+#special-curri {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+    position: relative;
+    background-size: cover;
+    z-index: 0;
+}
+
+#special-curri .special-curri {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#special-curri .special-curri-header {
+    margin: 70px 0 30px 0;
+}
+
+#special-curri .special-curri-top h1 span{
+    font-size: 5rem;
+}
+
+#special-curri .special-curri h1{
+    font-size: 4rem;
+}
+
+#special-curri .special-curri h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#special-curri .special-curri-top .details {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#special-curri .special-curri-top .details span {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
+#special-curri .special-curri-top .all-cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /* position: relative; */
+    margin: 30px;
+}
+
+#special-curri .special-curri-top .all-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 30px;
+    margin: 20px;
+    word-break: keep-all;
+}
+
+#special-curri .special-curri-top .all-cards .card.active {
+    animation: anim-rise 2s forwards;
+}
+
+#special-curri .special-curri-header h1.active {
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes clear-blur {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#special-curri .special-curri-top .all-cards .card h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+
+}
+
+#special-curri .special-curri-top .all-cards .card h2 span {
+    font-size: 2.6rem;
+}
+
+#special-curri .special-curri-top .checks {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+#special-curri .special-curri-top .checks span{
+    font-size: 2.2rem;
+    margin: 7px;
+}
+
+#special-curri .special-curri-bottom {
+    padding: 30px;
+}
+
+#special-curri .special-curri .curri-questions {
+    text-align: center;
+}
+
+#special-curri .special-curri .curri-questions h1 {
+    margin: 30px;
+}
+
+#special-curri .special-curri .curri-questions .question .inst {
+    margin: 60px 0;
+}
+
+#special-curri .special-curri .curri-questions .question .inst span{
+    font-weight: 500;
+}
+
+#special-curri .special-curri .curri-questions .question .due {
+    font-size: 2rem;
+}
+
+#special-curri .special-curri .curri-questions .question .js-Dday {
+    font-size: 7rem;
+    margin: 0;
+}
+
+
+#special-curri .special-curri .curri-questions h2 {
+    font-weight: 200;
+    max-width: 500px;
+    font-size: 2rem;
+}
+
+#special-curri .special-curri-bottom .curri-questions .question {
+    margin: 80px 0;
+}
+
+#special-curri .special-curri-bottom .curri-questions .question.active{
+    animation: anim-rise 2s forwards;
+}
+
+#special-curri .special-curri-bottom .all-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#special-curri .special-curri-bottom .all-cards .card {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+#special-curri .special-curri-bottom .all-cards .card h2{
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 480px) {
+    #special-curri .special-curri-top h2 {
+        padding: 10px;
+        font-size: 2rem;
+    }
+
+    #special-curri .special-curri-top .checks span{
+        font-size: 1.8rem;
+    }
+
+    #special-curri .special-curri-bottom .all-cards {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    #special-curri .special-curri-bottom .details {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #special-curri .special-curri-top .all-cards{
+        flex-direction: column;
+    }
+}
+
+/* #special-curri .special-curri-bottom .cta:hover {
+    background-position: right center; change the direction of the change here
+    color: #fff;
+    text-decoration: none;
+}
+
+#special-curri .special-curri-img:hover {
+    background-size: 120%;
+    background-position: center;
+}
+
+@media only screen and (min-width: 800px) {
+    #special-curri .special-curri-img {
+        width: 80vw;
+        height: 50vh;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    #special-curri .special-curri-top {
+        margin: 30px 0 0 0;
+        padding: 30px;
+    }
+    
+    #special-curri h1 {
+    }
+    #special-curri .special-curri-img {
+        margin: 0 auto;
+    }
+} */
+/* End Special Curriculum Section */
+
+
+/* Question Section  */
+
+#question {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+}
+
+#question:hover{
+    background-color: turquoise;
+}
+
+#question .question {
+    text-align: center;
+}
+
+#question .question h1 {
+    color: white;
+}
+/* End Question Section  */
+
+
+/* Contact Section */
+#contact {
+    background-color: white;
+}
+
+#contact .contact {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact h1 {
+    width: fit-content;
+    margin: 0 auto;
+    /* background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: rgb(214, 18, 18);
+}
+
+#contact .contact h1:hover {
+    background: rgb(131,58,180);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* End Contact Section */
+
+
+/* Keyframes */
+@keyframes text-reveal-rise{
+    0%{
+        color: rgb(214, 18, 18);
+        margin-bottom: -40px;
+    }
+
+}
+
+@keyframes text-reveal-box{
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes anim-rightwards {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-rise {
+
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
