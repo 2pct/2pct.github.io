@@ -1,0 +1,673 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;   
+    scroll-behavior: smooth; 
+}
+
+a {  
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+}
+
+h1, h2, h3 {
+    word-break: keep-all;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+b {
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.anim {
+    opacity: 0;
+}
+
+/* Hero Section  */
+#hero {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+}
+
+/* #hero #logo {
+    font-size: 7rem;
+    animation: text-reveal-rise 2s 1;
+    -webkit-animation: text-reveal-rise 2s 1;
+} */
+
+#hero .logo {
+    width: 300px;
+    text-shadow: 2px 2px 0 rgb(214, 18, 18);
+    animation: text-reveal-rise 1s;
+    -webkit-animation: text-reveal-rise 2s 1;
+}
+
+.item {
+    margin: 10px;
+}
+
+
+#hero .hero {
+    padding: 50px;
+    flex-direction: column;
+}
+
+#hero h1 {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+#hero h2 {
+    position: relative;
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 20px;
+}
+
+#hero .cta span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    -webkit-animation: text-reveal-box 1s ease;
+    animation: text-reveal-box 1s ease;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+#hero .cta {
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 15px;
+    -webkit-transition: .3s ease background-color;
+    transition: .3s ease background-color;
+    margin-left: 19px;
+}
+
+#hero .cta:hover {
+    color: rgb(214, 18, 18);
+    background-color: white;
+}
+
+@media only screen and (max-width: 480px) {
+    #hero .btn {
+        display: inline-block;
+    }
+}
+/* End Hero Section  */
+
+
+
+/* About Section */
+#about {
+    padding: 50px;
+}
+
+#about .about {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1000px;
+}
+
+#about .about-top h1 {
+    margin: 30px;
+    color: rgb(214, 18, 18);
+}
+
+#about .about-item {
+    margin: 20px 0;
+}
+
+#about .about-item h2 {
+    font-size: 3rem;
+    /* display: inline-block; */
+    /* position: relative; */
+    margin: 15px;
+}
+
+#about .about-item p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    max-width: 470px;
+    word-break: keep-all;
+    color: rgb(46, 46, 46);
+
+}
+
+
+/* #about .about-item h2 span {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 0;
+} */
+
+/* #about .about-item h2 span.active {
+    background-color: white;
+    animation: text-reveal-box 1s ease;
+    opacity: 0.5;
+}  */
+
+#about .about-item .cta {
+    border: 1px solid rgb(214, 18, 18);
+    letter-spacing: 1px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    max-width: 150px;
+    padding: 8px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(214, 18, 18);            
+    display: block;
+}
+/* /* End About Section */
+
+
+/* Curriculum Section */
+#curri {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+}
+
+#curri .curri {
+    flex-direction: column;
+    text-align: center;
+}
+
+#curri .curri-header {
+    margin: 30px;
+    padding: 30px;
+}
+
+#curri h1 {
+    color: white;
+    margin-top: 30px;
+    word-break: keep-all;
+}
+
+#curri h3 {
+    color: white;
+    word-break: keep-all;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 10px;
+}
+
+
+.cards {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card {
+    width: 290px;
+    height: 220px;
+    margin: 10px;
+}
+
+.flip-card h2 {
+    font-size: 2.5rem;
+    word-break: break-all;
+    margin: 10px;
+}
+
+.flip-card h2 span{
+    display: block;
+    color: crimson;
+}
+
+.flip-card p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+.flip-card .back h2 {
+    color: rgb(214, 18, 18);
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    -webkit-transition: transform 0.6s;;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.flip-card-inner.is-flipped {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+  
+.front, .back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+}
+  
+.front {
+    color: rgb(26, 26, 26);
+    background-color: white;
+}
+  
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+@media only screen and (min-width: 1000px) {
+
+
+}
+/* End Curriculum Section */
+
+
+/* Special Curriculum Section */
+#special-curri {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+    position: relative;
+    background-size: cover;
+    z-index: 0;
+}
+
+#special-curri .special-curri {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#special-curri .special-curri-header {
+    margin: 70px 0 30px 0;
+}
+
+#special-curri .special-curri-top h1 span{
+    font-size: 5rem;
+}
+
+#special-curri .special-curri h1{
+    font-size: 4rem;
+}
+
+#special-curri .special-curri h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#special-curri .special-curri-top .details {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#special-curri .special-curri-top .details span {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
+#special-curri .special-curri-top .all-cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /* position: relative; */
+    margin: 30px;
+}
+
+#special-curri .special-curri-top .all-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 30px;
+    margin: 20px;
+    word-break: keep-all;
+}
+
+#special-curri .special-curri-top .all-cards .card.active {
+    -webkit-animation: anim-rise 2s forwards;
+    animation: anim-rise 2s forwards;
+}
+
+#special-curri .special-curri-header h1.active {
+    -webkit-animation: fade-in 2s forwards;
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes clear-blur {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#special-curri .special-curri-top .all-cards .card h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+#special-curri .special-curri-top .all-cards .card h2 span {
+    font-size: 2.6rem;
+}
+
+
+#special-curri .special-curri-bottom {
+    padding-bottom: 100px;
+}
+
+#special-curri .special-curri .curri-questions h1 {
+    margin: 20px;
+}
+
+#special-curri .special-curri .curri-questions .due {
+    margin-bottom: 50px;
+}
+
+#special-curri .special-curri .curri-questions span {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    word-break: keep-all;
+}
+
+#special-curri .special-curri .curri-questions .js-Dday {
+    font-size: 7rem;
+}
+
+#special-curri .special-curri-bottom .item a {
+    font-size: 1.5rem;
+    /* background-color: white;
+    color: rgb(214, 18, 18); */
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 20px;
+    /* border-radius: 5px; */
+}
+
+#special-curri .special-curri-bottom .apply p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#special-curri .special-curri .curri-questions h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#special-curri .special-curri-bottom .curri-questions .item {
+    margin: 130px 0;
+}
+
+#special-curri .special-curri-bottom .curri-questions .item.active{
+    -webkit-animation: anim-rise 2s forwards;;
+    animation: anim-rise 2s forwards;
+}
+
+#special-curri .special-curri-bottom .apply.active{
+    -webkit-animation: anim-rise 2s forwards;;
+    animation: anim-rise 2s forwards;
+}
+
+#special-curri .special-curri-bottom .due.active{
+    -webkit-animation: anim-rise 2s forwards;;
+    animation: anim-rise 2s forwards;
+}
+
+#special-curri .special-curri-bottom .all-cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#special-curri .special-curri-bottom .all-cards .card {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+#special-curri .special-curri-bottom .all-cards .card h2{
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 480px) {
+    #special-curri .special-curri-top h2 {
+        padding: 10px;
+        font-size: 2rem;
+    }
+    #special-curri .special-curri-top .details span {
+        font-size: 1.5rem;
+    }
+
+    #special-curri .apply .all-cards {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #special-curri .special-curri-bottom .details {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #special-curri .special-curri-top .all-cards{
+        flex-direction: column;
+    }
+}
+/* End Special Curriculum Section */
+
+
+/* Question Section  */
+#question {
+    background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
+}
+
+#question:hover{
+    background-color: turquoise;
+}
+
+#question .question {
+    text-align: center;
+}
+
+#question .question h1 {
+    color: white;
+}
+/* End Question Section  */
+
+
+/* Contact Section */
+#contact {
+    background-color: white;
+}
+
+#contact .contact {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#contact .all-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+#contact .all-cards .card {
+    width: 270px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 5px 10px rgba(116, 116, 116, 0.3);
+}
+
+#contact .all-cards .card.active {
+    -webkit-animation: anim-rightwards 1s forwards;
+    animation: anim-rightwards 1s forwards;
+}
+
+#contact h1 {
+    margin: 80px 0 10px 0;
+}
+
+#contact .all-cards p {
+    font-size: 1.8rem;
+    color: rgb(75, 75, 75);
+}
+
+#contact .all-cards img {
+    width: 50px;
+    margin: 10px;
+}
+
+#contact .contact h1 {
+    color: rgb(214, 18, 18);
+}
+
+@media only screen and (max-width: 520px) {
+    #contact .all-cards {
+        flex-direction: column;
+    }
+
+    #contact .card {
+        width: 200px;
+    }
+}
+/* End Contact Section */
+
+
+/* Keyframes */
+@keyframes text-reveal-rise{
+    0%{
+        color: rgb(214, 18, 18);
+        margin-bottom: -40px;
+    }
+
+}
+
+@keyframes text-reveal-box{
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes anim-rightwards {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-rise {
+
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
