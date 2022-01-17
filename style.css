@@ -52,11 +52,6 @@ b {
     background: linear-gradient(to left, #e52d27 0%, #b31010  100%);
 }
 
-/* #hero #logo {
-    font-size: 7rem;
-    animation: text-reveal-rise 2s 1;
-    -webkit-animation: text-reveal-rise 2s 1;
-} */
 
 #hero .logo {
     width: 300px;
@@ -350,7 +345,7 @@ b {
     text-align: center;
     max-width: 750px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
 }
 
 #special-curri .special-curri-top .details span {
