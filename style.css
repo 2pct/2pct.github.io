@@ -353,6 +353,7 @@ b {
     font-weight: 300;
     font-size: 1.7rem;
     line-height: 1.7;
+    word-break: keep-all;
 }
 
 #special-curri .special-curri-top .all-cards {
