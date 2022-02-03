@@ -376,7 +376,7 @@ b {
     padding: 30px;
     margin: 20px;
     word-break: keep-all;
-    cursor: pointer;
+    
 }
 
 #special-curri .special-curri-top .all-cards .card.active {
@@ -505,6 +505,7 @@ b {
     border-radius: 10px;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
 }
 
 #special-curri .special-curri-bottom .all-cards .card h2{
