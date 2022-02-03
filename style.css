@@ -235,6 +235,7 @@ b {
     width: 290px;
     height: 220px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .flip-card h2 {
@@ -375,6 +376,7 @@ b {
     padding: 30px;
     margin: 20px;
     word-break: keep-all;
+    cursor: pointer;
 }
 
 #special-curri .special-curri-top .all-cards .card.active {
@@ -587,6 +589,7 @@ b {
     padding: 30px;
     margin: 15px;
     box-shadow: 0 5px 10px rgba(116, 116, 116, 0.3);
+    cursor: pointer;
 }
 
 #contact .all-cards .card.active {
